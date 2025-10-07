@@ -55,13 +55,19 @@ public class Main {
         //asan suallar ucun olan hisse burada olacaq
         // Random methodu ile 3 random sual sececek ve buna uygun olaraq hemin suallari ekranda cavab edecek
 
+
+
+
         for (int i =0; i<asanSuallar.length; i++) {
             //int sualIndeksi = 0;
+            int rand =(int)( Math.random() * 4 ); //burda xeta var, array 0-1-2 men ise 0-1-2-3
+            System.out.println(rand);
+
             String dogru = asanSuallar[i][1].trim().toUpperCase();
             do {
                 System.out.println((i + 1) + ". Sual: " + asanSuallar[i][0]);
-                for (int j = 2; j < asanSuallar[i].length; j++) {
-                    System.out.println(asanSuallar[i][j]);
+                for (int j = 2; j < asanSuallar[i].length; j++) { //CAVABLAR CAP OLUNUR
+                    System.out.println(asanSuallar[rand][j]);
                 }
                 System.out.print("Cavab (A/B/C): ");
                 String cavab = scan.nextLine().trim().toUpperCase();
