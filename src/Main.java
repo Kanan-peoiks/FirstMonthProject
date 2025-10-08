@@ -57,14 +57,25 @@ public class Main {
 
         int duzgunCavab=0;
         int sehvCavab=0;
-
+        boolean[] used = new boolean[asanSuallar.length];
 
         for (int k = 0;k < 3; k++) {
             int rand =(int)( Math.random() * asanSuallar.length ); //burda xeta var, array 0-1-2 men ise 0-1-2-3
             System.out.println(rand);
             boolean answeredCorrected=false;
 
-                    String dogru = asanSuallar[rand][2].trim().toUpperCase();
+            while (true){
+                if (used[rand]){
+                    rand =(int)( Math.random() * asanSuallar.length );
+                    System.out.println(rand);
+                }
+                else {
+                    used[rand]=true;
+                    break;
+                }
+            }
+
+            String dogru = asanSuallar[rand][2].trim().toUpperCase();
                     System.out.println((k+1)+". " + asanSuallar[rand][0]);
             System.out.println(asanSuallar[rand][1]);
 
