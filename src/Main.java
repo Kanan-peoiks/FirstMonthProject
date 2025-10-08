@@ -21,74 +21,64 @@ public class Main {
         System.out.println("Cavabınız yox olaraq qeyd edildi, oyuna keçə bilərik...");
     }
         System.out.println();
-        System.out.println("Başlayırıq! Uğurlar! \uD83C\uDF40");
+        System.out.println("Başlayırıq! Uğurlar! \uD83C\uDF40"); // BURDA AD YAZMASINI ISTE
+
 
         //interface ve ya abstract ile yazmaq
         String [][] asanSuallar =
                 {//her seviyyede bir dene cox cetin sual qoy
-                        {"Azərbaycanın paytaxtı hansıdır?", "A", "A) Bakı B) Gəncə C) Sumqayıt"},
-                        {"Azərbaycanın ən böyük gölü hansıdır?", "C", "A) Sərsəng B) Xəzər C) Göygöl"},
-                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A", "A) Tar B) Piano C) Nərə"},
-                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "B", "A) Tufandağ B) Bazardüzü C) Şahdağ"},
-                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "C", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar"}
+                        {"Azərbaycanın paytaxtı hansıdır?", "A) Bakı B) Gəncə C) Sumqayıt D) Lənkəran", "A"},
+                        {"Azərbaycanın ən böyük gölü hansıdır?", "A) Sərsəng B) Xəzər C) Göygöl D) Baykal", "C"},
+                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A) Tar B) Piano C) Nərə D) Piano", "A"},
+                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "A) Tufandağ B) Bazardüzü C) Şahdağ D) Everest", "B"},
+                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
                 };
 
         String [][] ortaSuallar =
-                {
-                        {"Azərbaycanın paytaxtı hansıdır?", "C", "A) Bakı B) Gəncə C) Sumqayıt"},
-                        {"Azərbaycanın ən böyük gölü hansıdır?", "C", "A) Sərsəng B) Xəzər C) Göygöl"},
-                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A", "A) Tar B) Piano C) Nərə"},
-                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "B", "A) Tufandağ B) Bazardüzü C) Şahdağ"},
-                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "C", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar"}
+                {//her seviyyede bir dene cox cetin sual qoy
+                        {"Azərbaycanın paytaxtı hansıdır?", "A) Bakı B) Gəncə C) Sumqayıt D) Lənkəran", "A"},
+                        {"Azərbaycanın ən böyük gölü hansıdır?", "A) Sərsəng B) Xəzər C) Göygöl D) Baykal", "C"},
+                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A) Tar B) Piano C) Nərə D) Piano", "A"},
+                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "A) Tufandağ B) Bazardüzü C) Şahdağ D) Everest", "B"},
+                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
                 };
 
         String [][] cetinSuallar =
-                {
-                        {"Azərbaycanın paytaxtı hansıdır?", "C", "A) Bakı B) Gəncə C) Sumqayıt"},
-                        {"Azərbaycanın ən böyük gölü hansıdır?", "C", "A) Sərsəng B) Xəzər C) Göygöl"},
-                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A", "A) Tar B) Piano C) Nərə"},
-                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "B", "A) Tufandağ B) Bazardüzü C) Şahdağ"},
-                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "C", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar"}
+                {//her seviyyede bir dene cox cetin sual qoy
+                        {"Azərbaycanın paytaxtı hansıdır?", "A) Bakı B) Gəncə C) Sumqayıt D) Lənkəran", "A"},
+                        {"Azərbaycanın ən böyük gölü hansıdır?", "A) Sərsəng B) Xəzər C) Göygöl D) Baykal", "C"},
+                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A) Tar B) Piano C) Nərə D) Piano", "A"},
+                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "A) Tufandağ B) Bazardüzü C) Şahdağ D) Everest", "B"},
+                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
                 };
 
-        int sehvSay=0;
         //asan suallar ucun olan hisse burada olacaq
         // Random methodu ile 3 random sual sececek ve buna uygun olaraq hemin suallari ekranda cavab edecek
 
+        int duzgunCavab=0;
+        int sehvCavab=0;
 
 
-
-        for (int i =0; i<asanSuallar.length; i++) {
-            //int sualIndeksi = 0;
-            int rand =(int)( Math.random() * 4 ); //burda xeta var, array 0-1-2 men ise 0-1-2-3
+        for (int k = 0;k < 3; k++) {
+            int rand =(int)( Math.random() * asanSuallar.length ); //burda xeta var, array 0-1-2 men ise 0-1-2-3
             System.out.println(rand);
+            boolean answeredCorrected=false;
 
-            String dogru = asanSuallar[i][1].trim().toUpperCase();
-            do {
-                System.out.println((i + 1) + ". Sual: " + asanSuallar[i][0]);
-                for (int j = 2; j < asanSuallar[i].length; j++) { //CAVABLAR CAP OLUNUR
-                    System.out.println(asanSuallar[rand][j]);
-                }
-                System.out.print("Cavab (A/B/C): ");
+                    String dogru = asanSuallar[rand][2].trim().toUpperCase();
+                    System.out.println((k+1)+". " + asanSuallar[rand][0]);
+            System.out.println(asanSuallar[rand][1]);
+
+                System.out.print("Cavab (A/B/C/D): ");
                 String cavab = scan.nextLine().trim().toUpperCase();
-
-                if (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C"))) {
-                    System.out.println("Zəhmət olmasa yalnız A, B və ya C daxil edin.");
-                    continue; // do-while davam etsin
-                }
-
-
-                if (cavab.equals(dogru)) {
-                    System.out.println("Doğru!");
-                   // duzgunSay++;
-                   //yo answeredCorrected = true; // sualdan çıx
-                } else {
-                    System.out.println("Səhv! Yenidən cəhd edin.");
-                    sehvSay++;
-                }
-            } while (sehvSay==0);// sehv cavab verse sehvSay bir vahid artacaq ve proqram bitsin
+            if (cavab.equals(dogru)) {
+                System.out.println("Doğru!");
+                duzgunCavab++;
+                answeredCorrected = true; // sualdan çıx
+            } else {
+                System.out.println("Səhv! Təəssüf ki, yarışmamız sona çatdı.");
+                sehvCavab++;
+            }
         }
-
 
 
 
