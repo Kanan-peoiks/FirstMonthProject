@@ -59,20 +59,30 @@ public class test {
 //                }
 //            } while (!answeredCorrected);
 //        }
-        int rand =(int)( Math.random() * asanSuallar.length ); //burda xeta var, array 0-1-2 men ise 0-1-2-3
-        System.out.println(rand);
-        boolean answeredCorrected=false;
-        boolean[] used = new boolean[asanSuallar.length];
-        while (true){
-            if (used[rand]){
-                rand =(int)( Math.random() * asanSuallar.length );
-                System.out.println(rand);
-            }
-            else {
-                used[rand]=true;
-                break;
-            }
-        }
+//        int rand =(int)( Math.random() * asanSuallar.length ); //burda xeta var, array 0-1-2 men ise 0-1-2-3
+//        System.out.println(rand);
+//        boolean answeredCorrected=false;
+//        boolean[] used = new boolean[asanSuallar.length];
+//        while (true){
+//            if (used[rand]){
+//                rand =(int)( Math.random() * asanSuallar.length );
+//                System.out.println(rand);
+//            }
+//            else {
+//                used[rand]=true;
+//                break;
+//            }
+//        }
+        int yariyariJokeri=1;
+        int skipJoker=1; // MAINDE VAR BUNLAR
+        int hintJoker = 0;
+
+
+
+
+
+
+
 
     }
 }
