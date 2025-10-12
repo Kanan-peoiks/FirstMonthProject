@@ -25,31 +25,31 @@ public class Main {
 
 
         //interface ve ya abstract ile yazmaq
-        String [][] asanSuallar =
+        String [][] asanSuallar = //HAZIRDI
                 {//her seviyyede bir dene cox cetin sual qoy
                         {"Səfəvilərin ilk paytaxtı hansıdır?", "A) Təbriz B) Qəzvin C) İsfahan D) Tehran", "A"},
-                        {"Azərbaycanın ən böyük gölü hansıdır?", "A) Sərsəng B) Xəzər C) Göygöl D) Baykal", "C"},
-                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A) Tar B) Piano C) Nərə D) Gitara", "A"},
-                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "A) Tufandağ B) Bazardüzü C) Şahdağ D) Everest", "B"},
+                        {"Şuşa şəhərinin banisi kim olub?", "A) Fətəli xan B) Nadir şah C) Pənahəli xan D) Cavad xan", "C"},
+                        {"Gəncə şəhərinin tarixi “Gəncə qalası” hansı dövrdə salınıb?", "A) Monqolların dövründə B) Qafqaz Albaniyası dövründə C) Orta əsrlərdə, Şəddadilər dövründə D) Səfəvilər dövründə", "C"},
+                        {"Azərbaycan Respublikasının ilk paytaxtı hansı şəhər olub?", "A) Bakı B) Gəncə C) Naxçıvan D) Şəki", "B"},
                         {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
                 };
 
-        String [][] ortaSuallar =
+        String [][] ortaSuallar = //HAZIRDI
                 {//her seviyyede bir dene cox cetin sual qoy
-                        {"Azərbaycanın paytaxtı hansıdır?", "A) Bakı B) Gəncə C) Sumqayıt D) Lənkəran", "A"},
-                        {"Azərbaycanın ən böyük gölü hansıdır?", "A) Sərsəng B) Xəzər C) Göygöl D) Baykal", "C"},
-                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A) Tar B) Piano C) Nərə D) Gitara", "A"},
-                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "A) Tufandağ B) Bazardüzü C) Şahdağ D) Everest", "B"},
-                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
+                        {"Qız qalası hansı əsrdə tikilmişdir?", "A) XI əsr B) XII əsr C) IX əsr D) X əsr", "B"},
+                        {"Şəki Xan Sarayı hansı hökmdarın dövründə inşa edilmişdir?", "A) Hüseyn xan Musəvi B) Fətəli xan C) Hacı Çələbi xan D) Məhəmmədhəsən xan", "C"},
+                        {"Qobustan qayaüstü rəsmləri hansı dövrə aiddir?", "A) Eneolit dövrü B) Mezolit dövrü C) Tunc dövrü D) Orta əsrlər", "B"},
+                        {"Xəzər dənizi tarix boyu “Kaspi dənizi” kimi də tanınıb. Bu ad haradan gəlir?", "A) Kaspi tayfaları bu ərazidə yaşamışdır B) Dəniz Kaspiya şəhərinin yaxınlığında yerləşirdi C) Kaspi qədim fars dilində “duzlu” deməkdir D) Məşhur Roma imperiyası sərkərdəsinin şərəfinə bu ad verilmişdir", "A"},
+                        {"Səfəvilər dövlətinin paytaxtı əvvəlcə Təbriz idi. Lakin sonradan paytaxt İsfahana köçürüldü. Bunun əsas səbəbi nə idi?", "A) Təbrizdə zəlzələlərin baş verməsi B) Təbrizin Osmanlı hücumlarına açıq olması C) İsfahanın iqliminin daha əlverişli olması D) Təbrizin Tehrana uzaq olması", "B"}
                 };
 
-        String [][] cetinSuallar =
+        String [][] cetinSuallar = //HAZIRDI
                 {//her seviyyede bir dene cox cetin sual qoy
-                        {"Azərbaycanın paytaxtı hansıdır?", "A) Bakı B) Gəncə C) Sumqayıt D) Lənkəran", "A"},
-                        {"Azərbaycanın ən böyük gölü hansıdır?", "A) Sərsəng B) Xəzər C) Göygöl D) Baykal", "C"},
-                        {"Azərbaycanın milli musiqi aləti hansıdır?", "A) Tar B) Piano C) Nərə D) Gitara", "A"},
-                        {"Azərbaycanın ən yüksək dağ zirvəsi hansıdır?", "A) Tufandağ B) Bazardüzü C) Şahdağ D) Everest", "B"},
-                        {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
+                        {"Səfəvilər dövründə Azərbaycan ərazisinin inzibati bölgüsü necə adlanırdı?", "A) Vilayətlər B) Bəylərbəyliklər C) Xanlıqlar D) Qəzalar", "B"},
+                        {"Gülüstan sülh müqaviləsindən sonra Azərbaycanın hansı tarixi bölgələri Rusiya imperiyasına birləşdirildi?", "A) Qarabağ, Şəki, Gəncə B) Naxçıvan, Ordubad, Lənkəran C) Gəncə, Şamaxı, Bakı D) Qarabağ, Gəncə, Şirvan", "D"},
+                        {"Azərbaycan ərazisində ilk dəfə xristianlıq dövlət dini kimi hansı dövlətdə qəbul edilib?", "A) Sabirlər B) Qafqaz Albaniyası C) Roma İmpersiyası D) Xəzərlər", "B"},
+                        {"Xəzər xaqanlığının paytaxtı olan İtil şəhəri harada yerləşirdi?", "A) Xəzər dənizinin qərb sahilində B) Volqa çayının aşağı axarında C) Dərbəndin cənubunda D) Aral gölünün yaxınlığında", "B"},
+                        {"Ərəblərin Qafqaza yürüşləri zamanı Azərbaycan torpaqlarında ən güclü müqavimət hansı bölgədə göstərilmişdi?", "A) Şirvan B) Qarabağ C) Gülüstan qalası D) Cavanşir qalası", "D"}
                 };
 
         //asan suallar ucun olan hisse burada olacaq
@@ -70,7 +70,7 @@ public class Main {
             int rand =(int)( Math.random() * asanSuallar.length );
             System.out.println(rand); //SİLİNECEK HİSSE
 
-            boolean answeredCorrected=false;
+            boolean answeredCorrected=false; //EHTIYAC OLACAQMI
 
             while (true){
                 if (usedAsan[rand]){
@@ -98,12 +98,8 @@ public class Main {
 //CAVABIN DOGRULUGUNU YOXLAMAQ
             if (cavab.equals(dogru)) {
                 System.out.println("Doğrudur! Siz 10 xal qazandınız. ");
-                if (k==0){
-    System.out.println("Sıradakı suallar üçün geriçəkilmə haqqına sahib oldunuz.");
-    //---------------------------------------------------------------------------------
-                    //GERİCEKİLME METHODUNA GİRİS
-                //---------------------------------------------------------------------------------
-                }
+                if (k==0){ //BIRINCI SUALA CAVAB VERENDEN SONRA GERICEKILME HAQQINA SAHIB OLDU
+    System.out.println("Sıradakı suallar üçün geriçəkilmə haqqına sahib oldunuz.");}
                 xal = xal+10;
                 duzgunCavab++; //SEHV CAVAB VERİLEN YERDE İSTİFADE ETMİSEM
             } else {
@@ -113,7 +109,22 @@ public class Main {
                 sehvXal = xal / (2 + duzgunCavab); //SEHV CAVAB VERDIKDE XALINDA OYNAMALAR EDIRIK, YA RISK AL, YA DA Geri CEKIL
                 break;
             }
-            System.out.println();
+
+            //---------------------------------------------------------------------------------
+            //GERİCEKİLME METHODUNA GİRİS
+            //---------------------------------------------------------------------------------
+
+            System.out.println("Seciminiz daxil edin: 1. Davam etmek 2. Gericekilme");
+            int secim = scan.nextInt();
+            switch (secim){
+                case 1:
+                    break;
+                case 2:
+                    System.out.println("Siz geri cekildiniz. Sizin xaliniz "+xal);
+                    return;
+                default:
+                    System.out.println("Bele bir secim yoxdur.");
+            }
         }
     if (sehvCavab){
         System.out.println("Təəssüf ki, yarışmamız sona çatdı. Sizin xalınız: "+sehvXal);
@@ -123,11 +134,11 @@ public class Main {
 
 //-------------------------------------------IKINCI MERHELE-------------------------------------------
 
-System.out.println("Təbriklər!! Siz birinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
-System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
-"Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir.");
-yariyariJokeri++;
-skipJoker++;
+    System.out.println("Təbriklər!! Siz birinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
+    System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
+    "Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir.");
+    yariyariJokeri++;
+    skipJoker++;
 
         boolean[] usedOrta = new boolean[ortaSuallar.length];
 
@@ -162,10 +173,7 @@ skipJoker++;
 //        while ();
             switch (secim){ //CAVAB VERMEK, JOKER ISTIFADE ETMEK VE GERICEKILME
                 case 1:
-//                    System.out.print("Cavab (A/B/C/D): ");
-//                    String cavab = scan.nextLine().trim().toUpperCase();
                     break;
-
                 case 2:
                     System.out.println("Zehmet olmasa istifade etmek istediyiniz jokeri secin (1/2/3): 1. '50/50' Jokeri 2. 'Skip' Jokeri 3. 'Hint' Jokeri");
                     int secim2 = scan.nextInt();
@@ -209,9 +217,8 @@ skipJoker++;
                     break;
 
                 case 3:
-                    System.out.println("Siz gericekilme haqqinizdan istifade edirsiniz. Sizin xaliniz "+ "xal");
-                    break;
-
+                    System.out.println("Siz geri cekildiniz. Sizin xaliniz "+xal);
+                    return;
                 default:
                     System.out.println("Bele bir seciminiz yoxdur.");
             }
