@@ -34,24 +34,6 @@ public class Main {
                         {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
                 };
 
-        String [][] ortaSuallar = //HAZIRDI
-                {//her seviyyede bir dene cox cetin sual qoy
-                        {"Qız qalası hansı əsrdə tikilmişdir?", "A) XI əsr B) XII əsr C) IX əsr D) X əsr", "B"},
-                        {"Şəki Xan Sarayı hansı hökmdarın dövründə inşa edilmişdir?", "A) Hüseyn xan Musəvi B) Fətəli xan C) Hacı Çələbi xan D) Məhəmmədhəsən xan", "C"},
-                        {"Qobustan qayaüstü rəsmləri hansı dövrə aiddir?", "A) Eneolit dövrü B) Mezolit dövrü C) Tunc dövrü D) Orta əsrlər", "B"},
-                        {"Xəzər dənizi tarix boyu “Kaspi dənizi” kimi də tanınıb. Bu ad haradan gəlir?", "A) Kaspi tayfaları bu ərazidə yaşamışdır B) Dəniz Kaspiya şəhərinin yaxınlığında yerləşirdi C) Kaspi qədim fars dilində “duzlu” deməkdir D) Məşhur Roma imperiyası sərkərdəsinin şərəfinə bu ad verilmişdir", "A"},
-                        {"Səfəvilər dövlətinin paytaxtı əvvəlcə Təbriz idi. Lakin sonradan paytaxt İsfahana köçürüldü. Bunun əsas səbəbi nə idi?", "A) Təbrizdə zəlzələlərin baş verməsi B) Təbrizin Osmanlı hücumlarına açıq olması C) İsfahanın iqliminin daha əlverişli olması D) Təbrizin Tehrana uzaq olması", "B"}
-                };
-
-        String [][] cetinSuallar = //HAZIRDI
-                {//her seviyyede bir dene cox cetin sual qoy
-                        {"Səfəvilər dövründə Azərbaycan ərazisinin inzibati bölgüsü necə adlanırdı?", "A) Vilayətlər B) Bəylərbəyliklər C) Xanlıqlar D) Qəzalar", "B"},
-                        {"Gülüstan sülh müqaviləsindən sonra Azərbaycanın hansı tarixi bölgələri Rusiya imperiyasına birləşdirildi?", "A) Qarabağ, Şəki, Gəncə B) Naxçıvan, Ordubad, Lənkəran C) Gəncə, Şamaxı, Bakı D) Qarabağ, Gəncə, Şirvan", "D"},
-                        {"Azərbaycan ərazisində ilk dəfə xristianlıq dövlət dini kimi hansı dövlətdə qəbul edilib?", "A) Sabirlər B) Qafqaz Albaniyası C) Roma İmpersiyası D) Xəzərlər", "B"},
-                        {"Xəzər xaqanlığının paytaxtı olan İtil şəhəri harada yerləşirdi?", "A) Xəzər dənizinin qərb sahilində B) Volqa çayının aşağı axarında C) Dərbəndin cənubunda D) Aral gölünün yaxınlığında", "B"},
-                        {"Ərəblərin Qafqaza yürüşləri zamanı Azərbaycan torpaqlarında ən güclü müqavimət hansı bölgədə göstərilmişdi?", "A) Şirvan B) Qarabağ C) Gülüstan qalası D) Cavanşir qalası", "D"}
-                };
-
         //asan suallar ucun olan hisse burada olacaq
         // Random methodu ile 3 random sual sececek ve buna uygun olaraq hemin suallari ekranda cavab edecek
 
@@ -85,24 +67,28 @@ public class Main {
             String dogru = asanSuallar[rand][2].trim().toUpperCase();
             System.out.println((k+1)+". " + asanSuallar[rand][0]); //SUALLAR
             System.out.println(asanSuallar[rand][1]); //VARIANTLAR
-
                 System.out.print("Cavab (A/B/C/D): ");
                 String cavab = scan.nextLine().trim().toUpperCase();
 
 //SADECE VARIANTLARDAKI HERFLERI DAXIL ETMEK
+            do {
             if (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D"))) {
                 System.out.println("Zəhmət olmasa yalnız A, B, C və ya D daxil edin.");
                 cavab = scan.nextLine().trim().toUpperCase();
-            }
+            }}
+            while (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D")));
 
 //CAVABIN DOGRULUGUNU YOXLAMAQ
             if (cavab.equals(dogru)) {
                 System.out.println("Doğrudur! Siz 10 xal qazandınız. ");
+
                 if (k==0){ //BIRINCI SUALA CAVAB VERENDEN SONRA GERICEKILME HAQQINA SAHIB OLDU
     System.out.println("Sıradakı suallar üçün geriçəkilmə haqqına sahib oldunuz.");}
+
                 xal = xal+10;
-                duzgunCavab++; //SEHV CAVAB VERİLEN YERDE İSTİFADE ETMİSEM
-            } else {
+                duzgunCavab++;}  //SEHV CAVAB VERİLEN YERDE İSTİFADE ETMİSEM
+
+            else {
                 System.out.println("Səhv!");
                 System.out.println("Doğru cavab: "+dogru);
                 sehvCavab=true;
@@ -110,10 +96,7 @@ public class Main {
                 break;
             }
 
-            //---------------------------------------------------------------------------------
-            //GERİCEKİLME METHODUNA GİRİS
-            //---------------------------------------------------------------------------------
-
+//GERİCEKİLME METHODUNA GİRİS
             System.out.println("Seciminiz daxil edin: 1. Davam etmek 2. Gericekilme");
             int secim = scan.nextInt();
             switch (secim){
@@ -121,10 +104,12 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Siz geri cekildiniz. Sizin xaliniz "+xal);
+                    scan.close();
                     return;
                 default:
                     System.out.println("Bele bir secim yoxdur.");
             }
+            //BIRINCI FOR BAGLANIR
         }
     if (sehvCavab){
         System.out.println("Təəssüf ki, yarışmamız sona çatdı. Sizin xalınız: "+sehvXal);
@@ -133,7 +118,14 @@ public class Main {
     }
 
 //-------------------------------------------IKINCI MERHELE-------------------------------------------
-
+        String[][] ortaSuallar = //HAZIRDI
+                {//her seviyyede bir dene cox cetin sual qoy
+                        {"Qız qalası hansı əsrdə tikilmişdir?", "A) XI əsr", "B) XII əsr", "C) IX əsr", "D) X əsr", "B"},
+                        {"Şəki Xan Sarayı hansı hökmdarın dövründə inşa edilmişdir?", "A) Hüseyn xan Musəvi", "B) Fətəli xan", "C) Hacı Çələbi xan", "D) Məhəmmədhəsən xan", "C"},
+                        {"Qobustan qayaüstü rəsmləri hansı dövrə aiddir?", "A) Eneolit dövrü", "B) Mezolit dövrü", "C) Tunc dövrü", "D) Orta əsrlər", "B"},
+                        {"Xəzər dənizi tarix boyu “Kaspi dənizi” kimi də tanınıb. Bu ad haradan gəlir?", "A) Kaspi tayfaları bu ərazidə yaşamışdır", "B) Dəniz Kaspiya şəhərinin yaxınlığında yerləşirdi", "C) Kaspi qədim fars dilində “duzlu” deməkdir", "D) Məşhur Roma imperiyası sərkərdəsinin şərəfinə bu ad verilmişdir", "A"},
+                        {"Səfəvilər dövlətinin paytaxtı əvvəlcə Təbriz idi. Lakin sonradan paytaxt İsfahana köçürüldü. Bunun əsas səbəbi nə idi?", "A) Təbrizdə zəlzələlərin baş verməsi", "B) Təbrizin Osmanlı hücumlarına açıq olması", "C) İsfahanın iqliminin daha əlverişli olması", "D) Təbrizin Tehrana uzaq olması", "B"}
+                };
     System.out.println("Təbriklər!! Siz birinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
     System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
     "Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir.");
@@ -158,9 +150,13 @@ public class Main {
                     break;
                 }
             }
-            String dogru = ortaSuallar[rand][2].trim().toUpperCase();
-            System.out.println((k+1)+". " + ortaSuallar[rand][0]); //SUALLAR
-            System.out.println(ortaSuallar[rand][1]); //VARIANTLAR
+            String dogru = ortaSuallar[rand][5].trim().toUpperCase();
+            //System.out.println((k+1)+". " + ortaSuallar[rand][0]); //SUALLAR
+            for (int i = 0; i < 5; i++) {
+                System.out.println(ortaSuallar[rand][i]); //VARIANTLAR
+            }
+
+
 //------------------------------------------------------------------------------------------------------
 //JOKERLER UCUN HISSE BURADA OLACAQ
             //------------------------------------------------------------------------------------------------------
@@ -180,20 +176,24 @@ public class Main {
                     if (secim2 == 1){
                         if (yariyariJokeri == 1){ //do while salmaliyam ki hemise true olmasin
                             System.out.println("Siz '50/50' Jokerini secdiniz ve sualdaki iki sehv cavab silinecek.");
-                            int randSual =(int)( Math.random() * 4 );
+                            int randSual =(int)( Math.random() * 4 )+1;
                             System.out.println(randSual);
                             switch (randSual){
-                                case 0:
-                                    System.out.println("A"); //SUALLARIN CAVAB OLAN YER
-                                    break;
                                 case 1:
-                                    System.out.println("B");
+                                    System.out.println(dogru);
+                                    System.out.println(ortaSuallar[rand][1]); //SUALLARIN CAVAB OLAN YER
                                     break;
                                 case 2:
-                                    System.out.println("C");
+                                    System.out.println(dogru);
+                                    System.out.println(ortaSuallar[rand][2]);
                                     break;
                                 case 3:
-                                    System.out.println("D");
+                                    System.out.println(dogru);
+                                    System.out.println(ortaSuallar[rand][3]);
+                                    break;
+                                case 4:
+                                    System.out.println(dogru);
+                                    System.out.println(ortaSuallar[rand][4]);
                                     break;
                                 default:
                                     System.out.println();
@@ -218,6 +218,7 @@ public class Main {
 
                 case 3:
                     System.out.println("Siz geri cekildiniz. Sizin xaliniz "+xal);
+                    scan.close();
                     return;
                 default:
                     System.out.println("Bele bir seciminiz yoxdur.");
@@ -225,11 +226,12 @@ public class Main {
             System.out.print("Cavab (A/B/C/D): ");
             String cavab = scan.nextLine().trim().toUpperCase();
 
-//SADECE VARIANTLARDAKI HERFLERI DAXIL ETMEK
-            if (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D"))) {
-                System.out.println("Zəhmət olmasa yalnız A, B, C və ya D daxil edin.");
-                cavab = scan.nextLine().trim().toUpperCase();
-            }
+            do {
+                if (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D"))) {
+                    System.out.println("Zəhmət olmasa yalnız A, B, C və ya D daxil edin.");
+                    cavab = scan.nextLine().trim().toUpperCase();
+                }}
+            while (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D")));
 
 //CAVABIN DOGRULUGUNU YOXLAMAQ
             if (cavab.equals(dogru)) {
@@ -251,16 +253,22 @@ public class Main {
             return;
         }
 System.out.println("Təbriklər!! Siz ikinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
+        System.out.println();
 System.out.println("Yeni mərhələdə əlavə bir Jokeriniz olacaq, bir ədəd 'Hint' Jokeri.\n" +
 "Joker haqqında məlumat: 'Hint' Jokeri sualdakı cavabı tapmağa ipucu verir. J-yə basaraq jokerdən istifadə edə bilərsiniz.");
 
 //-------------------------------------------UCUNCU MERHELE-------------------------------------------
 //BURDA HINT JOKERI UCUN MASSIVE ELAVE YER TEYIN ETMEK LAZIMDIR, EGER ISTIFADECI HINT JOKERINI ISTIFADE ETMEK ISTESE ARRAYIN HEMIN HISSESINE MURACIET ETSIN
 
-
-System.out.println("Təbriklər!! Siz birinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
-System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
-"Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir. J-yə basaraq jokerdən istifadə edə bilərsiniz.");
+        String [][] cetinSuallar = //HAZIRDI
+                {//her seviyyede bir dene cox cetin sual qoy
+                        {"Səfəvilər dövründə Azərbaycan ərazisinin inzibati bölgüsü necə adlanırdı?", "A) Vilayətlər B) Bəylərbəyliklər C) Xanlıqlar D) Qəzalar", "B"},
+                        {"Gülüstan sülh müqaviləsindən sonra Azərbaycanın hansı tarixi bölgələri Rusiya imperiyasına birləşdirildi?", "A) Qarabağ, Şəki, Gəncə B) Naxçıvan, Ordubad, Lənkəran C) Gəncə, Şamaxı, Bakı D) Qarabağ, Gəncə, Şirvan", "D"},
+                        {"Azərbaycan ərazisində ilk dəfə xristianlıq dövlət dini kimi hansı dövlətdə qəbul edilib?", "A) Sabirlər B) Qafqaz Albaniyası C) Roma İmpersiyası D) Xəzərlər", "B"},
+                        {"Xəzər xaqanlığının paytaxtı olan İtil şəhəri harada yerləşirdi?", "A) Xəzər dənizinin qərb sahilində B) Volqa çayının aşağı axarında C) Dərbəndin cənubunda D) Aral gölünün yaxınlığında", "B"},
+                        {"Ərəblərin Qafqaza yürüşləri zamanı Azərbaycan torpaqlarında ən güclü müqavimət hansı bölgədə göstərilmişdi?", "A) Şirvan B) Qarabağ C) Gülüstan qalası D) Cavanşir qalası", "D"}
+                };
+        //------------------
         hintJoker++;
 
         boolean[] usedCetin = new boolean[cetinSuallar.length];
@@ -289,10 +297,12 @@ System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' 
             String cavab = scan.nextLine().trim().toUpperCase();
 
 //SADECE VARIANTLARDAKI HERFLERI DAXIL ETMEK
-            if (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D"))) {
-                System.out.println("Zəhmət olmasa yalnız A, B, C və ya D daxil edin.");
-                cavab = scan.nextLine().trim().toUpperCase();
-            }
+            do {
+                if (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D"))) {
+                    System.out.println("Zəhmət olmasa yalnız A, B, C və ya D daxil edin.");
+                    cavab = scan.nextLine().trim().toUpperCase();
+                }}
+            while (!(cavab.equals("A") || cavab.equals("B") || cavab.equals("C") || cavab.equals("D")));
 
 //CAVABIN DOGRULUGUNU YOXLAMAQ
             if (cavab.equals(dogru)) {
