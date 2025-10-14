@@ -23,6 +23,7 @@ public class test {
         System.out.println("Təbriklər!! Siz birinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
         System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
                 "Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir.");
+
         yariyariJokeri++;
         skipJoker++;
 
@@ -37,23 +38,18 @@ public class test {
             while (true){
                 if (usedOrta[rand]){
                     rand =(int)( Math.random() * ortaSuallar.length );
-                    System.out.println(rand);
-                }
+                    System.out.println(rand);}
                 else {
                     usedOrta[rand]=true;
-                    break;
-                }
-            }
-            String dogru = ortaSuallar[rand][5].trim().toUpperCase();
-            //System.out.println((k+1)+". " + ortaSuallar[rand][0]); //SUALLAR
-            for (int i = 0; i < 5; i++) {
-                System.out.println(ortaSuallar[rand][i]); //VARIANTLAR +Suallar
-            }
+                    break;}}
 
+            String dogru = ortaSuallar[rand][5].trim().toUpperCase();
+            for (int i = 0; i < 5; i++) {
+                System.out.println(ortaSuallar[rand][i]);} //VARIANTLAR +Suallar
 
 //------------------------------------------------------------------------------------------------------
 //JOKERLER UCUN HISSE BURADA OLACAQ
-            //------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------
             System.out.println("Seciminiz daxil edin: 1. Suala cavab vermek 2. Joker istifade etmek 3. Gericekilme");
             int secim = scan.nextInt();
             scan.nextLine();
@@ -70,24 +66,23 @@ public class test {
                     if (secim2 == 1){
                         if (yariyariJokeri == 1){ //do while salmaliyam ki hemise true olmasin
                             System.out.println("Siz '50/50' Jokerini secdiniz ve sualdaki iki sehv cavab silinecek.");
-                            int randSual =(int)( Math.random() * 4 )+1;
-                            System.out.println(randSual);
 
-                            switch (randSual){
-                                case 1:
-                                    System.out.println(ortaSuallar[rand][5]);
-                                    System.out.println(ortaSuallar[rand][1]); //SUALLARIN CAVAB OLAN YER
-                                    break;
-                                case 2:
-                                    System.out.println(ortaSuallar[rand][5]);
-                                    System.out.println(ortaSuallar[rand][2]);
-                                    break;
-                                case 3:
-                                    System.out.println(ortaSuallar[rand][5]);
+//YAZMA SEBEBIM BIR DOGRU CAVABI VERSIN BIR RAND FUNKSIYASI ILE 1-2-3-4 ALACAM DOGRU CAVAB+RANDOM BIR CAVAB
+                            //DIQQET ETMELI OLDUGUM YER DOGRU CAVAB ILE UST USTE DUSMESIN, RANDOM VERILEN DOGRU CAVABLA UST USTE DUSMESIN
+                            System.out.println(ortaSuallar[rand][0]);
+                            for (int j = 1; j < 5; j++) {
+                                String option = ortaSuallar[rand][j].trim(); //Cavabi ekrana cixardir
+                                char optionLetter = Character.toUpperCase(option.charAt(0));
+                                char correctLetter = Character.toUpperCase(dogru.charAt(0));
+                                if (optionLetter == correctLetter) {
+                                    System.out.println(option); //cavabin variantini ekrana cixardir
+                                }
+                            }
+                            switch (dogru) {
+                                case "A", "D":
                                     System.out.println(ortaSuallar[rand][3]);
                                     break;
-                                case 4:
-                                    System.out.println(ortaSuallar[rand][5]);
+                                case "B", "C":
                                     System.out.println(ortaSuallar[rand][4]);
                                     break;
                                 default:
