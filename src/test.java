@@ -125,6 +125,7 @@ public class test {
                 default:
                     System.out.println("Bele bir seciminiz yoxdur.");
             }
+
             System.out.print("Cavab (A/B/C/D): ");
             String cavab = scan.nextLine().trim().toUpperCase();
 
