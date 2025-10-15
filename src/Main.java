@@ -29,35 +29,30 @@ public class Main {
                 {//her seviyyede bir dene cox cetin sual qoy
                         {"Səfəvilərin ilk paytaxtı hansıdır?", "A) Təbriz B) Qəzvin C) İsfahan D) Tehran", "A"},
                         {"Şuşa şəhərinin banisi kim olub?", "A) Fətəli xan B) Nadir şah C) Pənahəli xan D) Cavad xan", "C"},
-                        {"Gəncə şəhərinin tarixi “Gəncə qalası” hansı dövrdə salınıb?", "A) Monqolların dövründə B) Qafqaz Albaniyası dövründə C) Orta əsrlərdə, Şəddadilər dövründə D) Səfəvilər dövründə", "C"},
-                        {"Azərbaycan Respublikasının ilk paytaxtı hansı şəhər olub?", "A) Bakı B) Gəncə C) Naxçıvan D) Şəki", "B"},
+                        {"Gəncə şəhərinin tarixi “Gəncə qalası” hansı dövrdə salınıb?", "A) Monqolların dövründə B) Qafqaz Albaniyası dövründə C) Səfəvilər dövründə D) Şəddadilər dövründə", "D"},
+                        {"Azərbaycan Respublikasının ilk paytaxtı hansı şəhər olub?", "A) Bakı B) Şəki C) Naxçıvan D) Gəncə", "D"},
                         {"Azərbaycanda ən uzun müddətli hökm sürmüş Türk dövləti hansıdır?", "A) Səfəvilər B) Əfşarlar C) Şirvanşahlar D) Salarilər", "C"}
                 };
-
-        //asan suallar ucun olan hisse burada olacaq
-        // Random methodu ile 3 random sual sececek ve buna uygun olaraq hemin suallari ekranda cavab edecek
 
         int duzgunCavab=0;
         boolean sehvCavab=false;
         int xal=0;
         int sehvXal=0;
         int joker = 0; //EHTIYAC OLACAQMI BELKE BELE ETMEK OLAR KI, UMUMI OLAN JOKERINIZ BU QEDERDI KIMISINDEN
-        int yariyariJokeri=0;
-        int skipJoker=0;
+        int yariyariJokeri=1;
+        int skipJoker=1;
         int hintJoker = 0;
         boolean[] usedAsan = new boolean[asanSuallar.length];
 
 
         for (int k = 0;k < 3; k++) {
             int rand =(int)( Math.random() * asanSuallar.length );
-            System.out.println(rand); //SİLİNECEK HİSSE
 
             boolean answeredCorrected=false; //EHTIYAC OLACAQMI
 
             while (true){
                 if (usedAsan[rand]){
                     rand =(int)( Math.random() * asanSuallar.length );
-                    System.out.println(rand); //SİLİNECEK HİSSE
                 }
                 else {
                     usedAsan[rand]=true;
@@ -124,38 +119,32 @@ public class Main {
                         {"Şəki Xan Sarayı hansı hökmdarın dövründə inşa edilmişdir?", "A) Hüseyn xan Musəvi", "B) Fətəli xan", "C) Hacı Çələbi xan", "D) Məhəmmədhəsən xan", "C"},
                         {"Qobustan qayaüstü rəsmləri hansı dövrə aiddir?", "A) Eneolit dövrü", "B) Mezolit dövrü", "C) Tunc dövrü", "D) Orta əsrlər", "B"},
                         {"Xəzər dənizi tarix boyu “Kaspi dənizi” kimi də tanınıb. Bu ad haradan gəlir?", "A) Kaspi tayfaları bu ərazidə yaşamışdır", "B) Dəniz Kaspiya şəhərinin yaxınlığında yerləşirdi", "C) Kaspi qədim fars dilində “duzlu” deməkdir", "D) Məşhur Roma imperiyası sərkərdəsinin şərəfinə bu ad verilmişdir", "A"},
-                        {"Səfəvilər dövlətinin paytaxtı əvvəlcə Təbriz idi. Lakin sonradan paytaxt İsfahana köçürüldü. Bunun əsas səbəbi nə idi?", "A) Təbrizdə zəlzələlərin baş verməsi", "B) Təbrizin Osmanlı hücumlarına açıq olması", "C) İsfahanın iqliminin daha əlverişli olması", "D) Təbrizin Tehrana uzaq olması", "B"}
+                        {"Səfəvilər dövlətinin paytaxtı əvvəlcə Təbriz idi. Lakin sonradan paytaxt İsfahana köçürüldü. Bunun əsas səbəbi nə idi?", "A) Təbrizdə zəlzələlərin baş verməsi", "B) Təbrizin Osmanlı hücumlarına açıq olması", "C) İsfahanın iqliminin daha əlverişli olması", "D) Təbrizin Tehrana uzaq olması", "B"},
+                        {"Nadir şah Əfşarın Dehli yürüşü nəticəsində hansı məşhur tarixi əşyalar İran torpaqlarına gətirilmişdi?",  "A) Tavus taxtı və Köhlən Nur almazı",  "B) Qızıl Orda bayrağı və Şahnamə əlyazması",  "C) Babur ordusunun silahları",  "D) Hindistan qızılı və baharatı",  "A"}
                 };
-    System.out.println("Təbriklər!! Siz birinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
-    System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
-    "Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir.");
-    yariyariJokeri++;
-    skipJoker++;
+        System.out.println("Təbriklər!! Siz birinci mərhələni bitirdiniz. Sizin xalınız: "+xal);
+        System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
+                "Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir.");
 
         boolean[] usedOrta = new boolean[ortaSuallar.length];
-
         for (int k = 0;k < 3; k++) {
-            int rand =(int)( Math.random() * ortaSuallar.length );
+
+            int rand =(int)( Math.random() * 5 ); //RANDOM SUAL VERMESI UCUN
             System.out.println(rand);
 
             boolean answeredCorrected=false;
 
             while (true){
                 if (usedOrta[rand]){
-                    rand =(int)( Math.random() * ortaSuallar.length );
-                    System.out.println(rand);
-                }
+                    rand =(int)( Math.random() * 5 );
+                    System.out.println(rand);}
                 else {
                     usedOrta[rand]=true;
-                    break;
-                }
-            }
-            String dogru = ortaSuallar[rand][5].trim().toUpperCase();
-            //System.out.println((k+1)+". " + ortaSuallar[rand][0]); //SUALLAR
-            for (int i = 0; i < 5; i++) {
-                System.out.println(ortaSuallar[rand][i]); //VARIANTLAR
-            }
+                    break;}}
 
+            String dogru = ortaSuallar[rand][5].trim().toUpperCase();
+            for (int i = 0; i < 5; i++) {
+                System.out.println(ortaSuallar[rand][i]);} //VARIANTLAR +Suallar
 
 //------------------------------------------------------------------------------------------------------
 //JOKERLER UCUN HISSE BURADA OLACAQ
@@ -173,47 +162,56 @@ public class Main {
                 case 2:
                     System.out.println("Zehmet olmasa istifade etmek istediyiniz jokeri secin (1/2/3): 1. '50/50' Jokeri 2. 'Skip' Jokeri 3. 'Hint' Jokeri");
                     int secim2 = scan.nextInt();
-                    if (secim2 == 1){
-                        if (yariyariJokeri == 1){ //do while salmaliyam ki hemise true olmasin
-                            System.out.println("Siz '50/50' Jokerini secdiniz ve sualdaki iki sehv cavab silinecek.");
-                            int randSual =(int)( Math.random() * 4 )+1;
-                            System.out.println(randSual);
-                            switch (randSual){
-                                case 1:
-                                    System.out.println(dogru);
-                                    System.out.println(ortaSuallar[rand][1]); //SUALLARIN CAVAB OLAN YER
-                                    break;
-                                case 2:
-                                    System.out.println(dogru);
-                                    System.out.println(ortaSuallar[rand][2]);
-                                    break;
-                                case 3:
-                                    System.out.println(dogru);
-                                    System.out.println(ortaSuallar[rand][3]);
-                                    break;
-                                case 4:
-                                    System.out.println(dogru);
-                                    System.out.println(ortaSuallar[rand][4]);
-                                    break;
-                                default:
-                                    System.out.println();
+//50/50 JOKERI
+                    switch (secim2){
+                        case 1:
+                            if (yariyariJokeri==0){
+                                System.out.println("50/50 Jokeri artıq istifadə edilib.");
+                                for (int i = 0; i < 5; i++) {
+                                    System.out.println(ortaSuallar[rand][i]);}
                             }
-                            yariyariJokeri=0;}
-                        else {
-                            System.out.println("Siz bu Jokeri istifade etmisiniz...");
-                        }
-                    }
-                    else if (secim2==2){
-                        System.out.println("Siz 'Skip' Jokerini secdiniz ve basqa bir suala kecid edilecek");
-                        skipJoker=0;
-                    }
-                    else if (secim2==3){
-                        //HINT BURDA OLACAQ
-                        hintJoker = 0;
-                    }
-                    else {
-                        System.out.println("Teessuf ki, bele bir seciminiz yoxdur.");
-                    }
+                            else {
+                                System.out.println("Siz '50/50' Jokerini secdiniz ve sualdaki iki sehv cavab silinecek.");
+                                System.out.println(ortaSuallar[rand][0]); //ISTIFADECI UCUN SUALI YENIDEN VERIREM
+                                for (int j = 1; j < 5; j++) {
+                                    String option = ortaSuallar[rand][j].trim(); //Cavabi ekrana cixardir
+                                    char optionLetter = Character.toUpperCase(option.charAt(0));
+                                    char correctLetter = Character.toUpperCase(dogru.charAt(0));
+                                    if (optionLetter == correctLetter) {
+                                        System.out.println(option); //cavabin variantini ekrana cixardir
+                                    }
+                                }
+                                switch (dogru) {
+                                    case "A", "D":
+                                        System.out.println(ortaSuallar[rand][3]);
+                                        break;
+                                    case "B", "C":
+                                        System.out.println(ortaSuallar[rand][4]);
+                                        break;
+                                    default:
+                                        System.out.println();
+                                }
+                                yariyariJokeri=0;}
+                            break;
+//SKIP JOKERI------------------------------------------------------------------------------
+                        case 2:
+                            if (skipJoker==0){
+                                System.out.println("Skip Jokeri artıq istifadə edilib.");
+                                for (int i = 0; i < 5; i++) {
+                                    System.out.println(ortaSuallar[rand][i]);}
+                            }
+                            else {
+                                System.out.println("Siz 'Skip' JokerinDEN ISTIFADE ETDINIZ. SUALINIZ DEYISIR...");
+                                for (int i = 0; i < 5; i++) {
+                                    System.out.println(ortaSuallar[5][i]);}
+                                dogru = ortaSuallar[5][5].trim().toUpperCase();
+                                skipJoker=0;}
+                            break;
+                        case 3:
+                            System.out.println("'Hint' Jokeri");
+                            break;
+                        default:
+                            System.out.println("BELE JOKER YOXDUR DEYECEM");}
                     break;
 
                 case 3:
@@ -235,8 +233,8 @@ public class Main {
 
 //CAVABIN DOGRULUGUNU YOXLAMAQ
             if (cavab.equals(dogru)) {
-                System.out.println("Doğrudur! Siz 10 xal qazandınız. ");
-                xal = xal+10;
+                System.out.println("Doğrudur! Siz 20 xal qazandınız. ");
+                xal = xal+20;
                 duzgunCavab++;
             } else {
                 System.out.println("Səhv!");
@@ -269,19 +267,19 @@ System.out.println("Yeni mərhələdə əlavə bir Jokeriniz olacaq, bir ədəd 
                         {"Ərəblərin Qafqaza yürüşləri zamanı Azərbaycan torpaqlarında ən güclü müqavimət hansı bölgədə göstərilmişdi?", "A) Şirvan B) Qarabağ C) Gülüstan qalası D) Cavanşir qalası", "D"}
                 };
         //------------------
-        hintJoker++;
+        //HİNT JOKERİ
 
         boolean[] usedCetin = new boolean[cetinSuallar.length];
 
         for (int k = 0;k < 3; k++) {
-            int rand =(int)( Math.random() * cetinSuallar.length );
+            int rand =(int)( Math.random() * 5 );
             System.out.println(rand);
 
             boolean answeredCorrected=false;
 
             while (true){
                 if (usedCetin[rand]){
-                    rand =(int)( Math.random() * cetinSuallar.length );
+                    rand =(int)( Math.random() * 5 );
                     System.out.println(rand);
                 }
                 else {
@@ -306,8 +304,8 @@ System.out.println("Yeni mərhələdə əlavə bir Jokeriniz olacaq, bir ədəd 
 
 //CAVABIN DOGRULUGUNU YOXLAMAQ
             if (cavab.equals(dogru)) {
-                System.out.println("Doğrudur! Siz 10 xal qazandınız. ");
-                xal = xal+10;
+                System.out.println("Doğrudur! Siz 30 xal qazandınız. ");
+                xal = xal+30;
                 duzgunCavab++;
             } else {
                 System.out.println("Səhv!");

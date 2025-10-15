@@ -24,8 +24,7 @@ public class test {
         System.out.println("Yeni mərhələdə iki Jokeriniz olacaq, bir ədəd '50/50' Jokeri və bir ədəd 'Skip' Jokeri.\n" +
                 "Jokerlər haqqında məlumat: '50/50' Jokeri sualdakı iki səhv cavabı silir, 'Skip' Jokeri isə yeni bir suala keçir.");
 
-        yariyariJokeri++;
-        skipJoker++;
+
 
         boolean[] usedOrta = new boolean[ortaSuallar.length];
         boolean[] usedOrtaSual = new boolean[ortaSuallar.length];
@@ -63,48 +62,60 @@ public class test {
                 case 2:
                     System.out.println("Zehmet olmasa istifade etmek istediyiniz jokeri secin (1/2/3): 1. '50/50' Jokeri 2. 'Skip' Jokeri 3. 'Hint' Jokeri");
                     int secim2 = scan.nextInt();
-                    if (secim2 == 1){
-                        if (yariyariJokeri == 1){ //do while salmaliyam ki hemise true olmasin
-                            System.out.println("Siz '50/50' Jokerini secdiniz ve sualdaki iki sehv cavab silinecek.");
-
-//YAZMA SEBEBIM BIR DOGRU CAVABI VERSIN BIR RAND FUNKSIYASI ILE 1-2-3-4 ALACAM DOGRU CAVAB+RANDOM BIR CAVAB
-                            //DIQQET ETMELI OLDUGUM YER DOGRU CAVAB ILE UST USTE DUSMESIN, RANDOM VERILEN DOGRU CAVABLA UST USTE DUSMESIN
-                            System.out.println(ortaSuallar[rand][0]);
-                            for (int j = 1; j < 5; j++) {
-                                String option = ortaSuallar[rand][j].trim(); //Cavabi ekrana cixardir
-                                char optionLetter = Character.toUpperCase(option.charAt(0));
-                                char correctLetter = Character.toUpperCase(dogru.charAt(0));
-                                if (optionLetter == correctLetter) {
-                                    System.out.println(option); //cavabin variantini ekrana cixardir
-                                }
+//JOKERLER
+                    switch (secim2){
+                        case 1:
+                            if (yariyariJokeri==0){
+                                System.out.println("50/50 Jokeri artıq istifadə edilib.");
                             }
-                            switch (dogru) {
-                                case "A", "D":
-                                    System.out.println(ortaSuallar[rand][3]);
+                            else {
+                                System.out.println("Siz '50/50' Jokerini secdiniz ve sualdaki iki sehv cavab silinecek.");
+                                System.out.println(ortaSuallar[rand][0]); //ISTIFADECI UCUN SUALI YENIDEN VERIREM
+                                for (int j = 1; j < 5; j++) {
+                                    String option = ortaSuallar[rand][j].trim(); //Cavabi ekrana cixardir
+                                    char optionLetter = Character.toUpperCase(option.charAt(0));
+                                    char correctLetter = Character.toUpperCase(dogru.charAt(0));
+                                    if (optionLetter == correctLetter) {
+                                        System.out.println(option); //cavabin variantini ekrana cixardir
+                                    }
+                                }
+                                switch (dogru) {
+                                    case "A", "D":
+                                        System.out.println(ortaSuallar[rand][3]);
+                                        break;
+                                    case "B", "C":
+                                        System.out.println(ortaSuallar[rand][4]);
+                                        break;
+                                    default:
+                                        System.out.println();
+                                }
+                                yariyariJokeri=0;}
+                            break;
+//SKIP JOKERI------------------------------------------------------------------------------
+                        case 2:
+                            System.out.println("Siz 'Skip' JokerinDEN ISTIFADE ETDINIZ. SUALINIZ DEYISIR...");
+                            switch (rand){
+                                case 0,1,2,3:
+                                    System.out.println(ortaSuallar[rand+1][0]);
+                                    for (int i = 1; i < 5; i++) {
+                                        System.out.println(ortaSuallar[rand+1][i]);}
+                                    dogru = ortaSuallar[rand+1][5].trim().toUpperCase();
                                     break;
-                                case "B", "C":
-                                    System.out.println(ortaSuallar[rand][4]);
+                                case 4:
+                                    System.out.println(ortaSuallar[rand-1][0]);
+                                    for (int i = 1; i < 5; i++) {
+                                        System.out.println(ortaSuallar[rand-1][i]);}
+                                    dogru = ortaSuallar[rand-1][5].trim().toUpperCase();
                                     break;
                                 default:
                                     System.out.println();
                             }
-                            yariyariJokeri=0;}
-                        else {
-                            System.out.println("Siz bu Jokeri istifade etmisiniz...");
-                        }
-
-                    }
-                    else if (secim2==2){
-                        System.out.println("Siz 'Skip' Jokerini secdiniz ve basqa bir suala kecid edilecek");
-                        skipJoker=0;
-                    }
-                    else if (secim2==3){
-                        //HINT BURDA OLACAQ
-                        hintJoker = 0;
-                    }
-                    else {
-                        System.out.println("Teessuf ki, bele bir seciminiz yoxdur.");
-                    }
+                            break;
+                        case 3:
+                            System.out.println("'Hint' Jokeri");
+                            break;
+                        default:
+                            System.out.println("BELE JOKER YOXDUR DEYECEM");}
                     break;
 
                 case 3:
