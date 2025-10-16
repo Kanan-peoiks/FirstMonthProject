@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Salam! \uD83D\uDC4B\n" +
+        System.out.print("Adınızı daxil edin: ");
+        String name = scan.nextLine();
+        System.out.println("Salam, "+name+ "! \uD83D\uDC4B\n" +
 "“Azərbaycanın Tarixi Abidələri” viktorinasına xoş gəlmisiniz. Oyun 10 sualdan ibarətdir. Qaydaları oxumaq istəyirsiniz? (Hə / Yox)");
         String heYoxCavabi = scan.nextLine();
         String he = "Hə";
